@@ -26,7 +26,12 @@ function getResults(query){
     fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
     .then((weather) => {
         return weather.json();
-    }).then(displayResults).reject(Swal.fire(
+    }).then(displayResults).catch(cityErrorAlert)
+}
+
+function cityErrorAlert(){
+    
+    (Swal.fire(
         'Algo deu errado..',
         'Você inseriu uma cidade inválida',
         'error'
