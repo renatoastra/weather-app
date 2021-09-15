@@ -96,9 +96,9 @@ function getImg(){
         
         let body = document.querySelector('body');
         console.log(result)
-        body.style.backgroundImage = `url(${result.urls.raw})`
+        body.style.backgroundImage = `url(${result.urls.regular})`
         body.style.backgroundPosition = 'center'
-        console.log(result.urls.raw)
+        console.log(result.urls.regular)
     })
 }
 
