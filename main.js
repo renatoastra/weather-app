@@ -54,7 +54,7 @@ function displayResults(weather){
     temp.innerText = `${parseInt(weather.main.temp)}°C`
 
     let hiLow = document.querySelector('.hi-low');
-    hiLow.innerText = `min ${parseInt(weather.main.temp_max)}°C / max ${parseInt(weather.main.temp_min)}°C`
+    hiLow.innerText = `max ${parseInt(weather.main.temp_max)}°C / min ${parseInt(weather.main.temp_min)}°C`
 
     getImg();
 
